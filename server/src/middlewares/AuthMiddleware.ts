@@ -10,6 +10,7 @@ interface UserDocument {
     name: string
     email: string
     avatar?: string | undefined
+    bio?: string | undefined
 }
 
 declare global {
@@ -54,7 +55,8 @@ export const isAuth: RequestHandler = async (req, res, next) => {
             id: userDoc._id,
             name: userDoc.name,
             email: userDoc.email,
-            avatar: userDoc.avatar?.url
+            avatar: userDoc.avatar?.url,
+            bio: userDoc.bio
         }
         next();
     } catch (error) {

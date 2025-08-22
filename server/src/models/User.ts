@@ -7,6 +7,7 @@ interface UserDocument extends Document {
     password: string;
     name: string;
     token: string | null;
+    bio?: string;
     avatar?: {
         url: string;
         id: string;
@@ -39,6 +40,9 @@ const UserSchema = new Schema<UserDocument, {}, Methods>({
     },
     token: {
         type: String
+    },
+    bio: {
+        type: String,
     },
     avatar: {
         type: Object,

@@ -8,7 +8,7 @@ const FormInpunt: FC<FormInputProps> = (props) => {
     const [isActive, setIsActive] = useState(false);
     return (
 
-        <TextInput style={[styles.input, isActive ? styles.inputActive : styles.inputdeActive]} {...props} onFocus={() => setIsActive(true)} onBlur={() => setIsActive(false)} />
+        <TextInput style={[styles.input, isActive ? styles.inputActive : styles.inputdeActive]} {...props} onFocus={() => setIsActive(true)} onBlur={() => setIsActive(false)} placeholderTextColor={colors.primary} />
 
     )
 }
